@@ -20,7 +20,8 @@ export default function Ficha({ props }) {
           {console.log(props.Tel)}
         </p>
         <p>
-          🔗 <Link href={props.Web}>Página Web</Link> | ✉️ {props.Email}
+          🔗 <Link href={props.Web}>Página Web</Link>{" "}
+          {props.Email != "" ? `| ✉️ ${props.Email}` : ""}
         </p>
       </div>
       <div className="arrow">^</div>
@@ -29,13 +30,20 @@ export default function Ficha({ props }) {
   return (
     <>
       <Collapsible trigger={summary} className={styles.header}>
+        <p className={styles.descripcion}>🗒️ {props.Descripcion}</p>
+        <hr></hr>
         <div className={styles.details}>
           <p>
-            📍 {props.Direccion} | 💰 {props.Precio}
+            {props.Direccion != "" && props.Precio != ""
+              ? `📍 ${props.Direccion} | 💰 ${props.Precio}`
+              : props.Direccion != "" && props.Precio === ""
+              ? `📍 ${props.Direccion}`
+              : props.Precio != ""
+              ? `💰 ${props.Precio}`
+              : null}
           </p>
           <p>💬 {props.Idioma.join(", ")}</p>
-          <p className={styles.descripcion}>🗒️ {props.Descripcion}</p>
-          <p>⁉️ {props.Tips}</p>
+          {props.Tips != "" ? <p>⁉️ {props.Tips}</p> : null}
         </div>
       </Collapsible>
     </>

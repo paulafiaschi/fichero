@@ -1,16 +1,15 @@
 .fichero {
   width: 100%;
   position: relative;
+  p {
+    margin: 0;
+  }
 }
 
 .fichaClosed {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-
-  p {
-    margin: 0;
-  }
 }
 
 .nombre {
@@ -20,13 +19,11 @@
   }
 }
 
-.details {
-  margin-top: 3rem;
-
-  .descripcion {
-    font-size: 20px;
-  }
+.descripcion {
+  font-size: 20px;
+  margin-top: 1.5rem !important;
 }
+
 .summary {
   display: flex;
   justify-content: space-between;
