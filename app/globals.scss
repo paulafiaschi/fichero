@@ -1,0 +1,16 @@
+.Collapsible {
+  margin: 1rem 0;
+  border: solid 1px rgb(209, 209, 209);
+  padding: 1rem;
+}
+
+.arrow {
+  height: fit-content;
+  transform: rotate(180deg);
+  font-size: 30px;
+}
+.Collapsible__trigger.is-open {
+  .arrow {
+    transform: rotate(0);
+  }
+}
