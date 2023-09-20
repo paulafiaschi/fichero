@@ -12,13 +12,13 @@ export default function Main(props) {
   function filterList(f) {
     setFilter(f);
     setFilteredList(props.data.filter((ficha) => ficha.Categoria === f));
-    console.log(filter);
   }
   return (
     <>
-      <h2>{filter}</h2>
-      <div>
+      {/* <h2>Categoría: {filter}</h2> */}
+      <div className={styles.buttons}>
         <button
+          className={filter === "Todas" ? `${styles.active}` : null}
           category="Todas"
           onClick={() => {
             setFilter("Todas");
@@ -26,6 +26,7 @@ export default function Main(props) {
           Todas
         </button>
         <button
+          className={filter === "Emergencias" ? `${styles.active}` : null}
           category="Emergencias"
           onClick={() => {
             filterList("Emergencias");
@@ -33,6 +34,9 @@ export default function Main(props) {
           Emergencias
         </button>
         <button
+          className={
+            filter === "Construyendo Comunidad" ? `${styles.active}` : null
+          }
           category="Construyendo Comunidad"
           onClick={() => {
             filterList("Construyendo Comunidad");

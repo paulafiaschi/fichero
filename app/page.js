@@ -22,11 +22,10 @@ export default async function Home(props) {
 
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <h1>Fichero Las Otras</h1>
-      </div>
-      <label>Con qué te podemos ayudar?</label>
-      <input type="search"></input>
+      <h1>Recursero</h1>
+
+      {/* <label>Con qué te podemos ayudar?</label>
+      <input type="search"></input> */}
       <Main data={data} />
     </main>
   );

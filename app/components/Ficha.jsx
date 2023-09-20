@@ -17,7 +17,6 @@ export default function Ficha({ props }) {
             : props.Contacto != props.Tel
             ? `🗣️ ${props.Contacto}`
             : ""}
-          {console.log(props.Tel)}
         </p>
         <p>
           🔗 <Link href={props.Web}>Página Web</Link>{" "}
