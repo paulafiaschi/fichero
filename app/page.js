@@ -1,7 +1,5 @@
-"use client";
 import styles from "./page.module.css";
-import CategoryButton from "./components/CategoryButton";
-import Ficha from "./components/Ficha";
+import Main from "./components/Main";
 
 async function getData() {
   const res = await fetch("https://cocktails-240e.restdb.io/rest/las-otras", {
@@ -29,18 +27,7 @@ export default async function Home(props) {
       </div>
       <label>Con qué te podemos ayudar?</label>
       <input type="search"></input>
-
-      {data.map((ficha) => {
-        return <Ficha props={ficha} key={ficha._id} />;
-      })}
-      <div>
-        <CategoryButton
-          category="Emergencias"
-          onClick={console.log("emergencias")}
-        />
-        <CategoryButton category="Construyendo Comunidad" />
-        <CategoryButton category="Goce" />
-      </div>
+      <Main data={data} />
     </main>
   );
 }

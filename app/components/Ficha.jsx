@@ -19,6 +19,7 @@ export default function Ficha({ props }) {
       <p>💬 {props.Idioma.join(", ")}</p>
       <p>💰 {props.Precio}</p>
       <p>🗒️ {props.Descripcion}</p>
+      <p>🗒️ {props.Descripcion}</p>
       <p>⁉️ {props.Tips}</p>
     </div>
   );
