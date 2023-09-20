@@ -29,8 +29,7 @@ export default async function Home(props) {
       </div>
       <label>Con qué te podemos ayudar?</label>
       <input type="search"></input>
-      {/* <h2>{data[5].Nombre}</h2>
-      {console.log(data[0])} */}
+
       {data.map((ficha) => {
         return <Ficha props={ficha} key={ficha._id} />;
       })}
