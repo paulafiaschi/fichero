@@ -18,10 +18,11 @@ export default function Ficha({ props }) {
             ? `🗣️ ${props.Contacto}`
             : ""}
         </p>
-        <p>
+        Í
+        <div>
           🔗 <Link href={props.Web}>Página Web</Link>{" "}
           {props.Email != "" ? `| ✉️ ${props.Email}` : ""}
-        </p>
+        </div>
       </div>
       <div className="arrow">^</div>
     </div>
