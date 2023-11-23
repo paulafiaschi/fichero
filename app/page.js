@@ -21,12 +21,14 @@ export default async function Home(props) {
   const data = await getData();
 
   return (
-    <main className={styles.main}>
+    <>
       <h1>Recursero</h1>
 
-      {/* <label>Con qué te podemos ayudar?</label>
+      <main className={styles.main}>
+        {/* <label>Con qué te podemos ayudar?</label>
       <input type="search"></input> */}
-      <Main data={data} />
-    </main>
+        <Main data={data} />
+      </main>
+    </>
   );
 }

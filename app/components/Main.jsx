@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { slide as Menu } from "react-burger-menu";
 import styles from "../ficha.module.scss";
 
 import CategoryButton from "./CategoryButton";
@@ -15,11 +16,23 @@ export default function Main(props) {
   }
   return (
     <>
+      {" "}
+      <Menu>
+        <a id="home" className="menu-item" href="/">
+          Home
+        </a>
+        <a id="about" className="menu-item" href="/about">
+          About
+        </a>
+        <a id="contact" className="menu-item" href="/contact">
+          Contact
+        </a>
+      </Menu>
       {/* <h2>Categoría: {filter}</h2> */}
       <div className={styles.buttons}>
+        <h3>Categorías</h3>
         <button
           className={filter === "Todas" ? `${styles.active}` : null}
-          category="Todas"
           onClick={() => {
             setFilter("Todas");
           }}>
@@ -27,7 +40,6 @@ export default function Main(props) {
         </button>
         <button
           className={filter === "Emergencias" ? `${styles.active}` : null}
-          category="Emergencias"
           onClick={() => {
             filterList("Emergencias");
           }}>
@@ -37,14 +49,12 @@ export default function Main(props) {
           className={
             filter === "Construyendo Comunidad" ? `${styles.active}` : null
           }
-          category="Construyendo Comunidad"
           onClick={() => {
             filterList("Construyendo Comunidad");
           }}>
           Construyendo Comunidad
         </button>
       </div>
-
       <div className={styles.fichero}>
         {filter === "Todas"
           ? props.data.map((ficha) => {

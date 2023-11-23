@@ -16,7 +16,7 @@ export default function Ficha({ props }) {
       <div className={styles.fichaClosed}>
         <p className={styles.nombre}>
           <span>{props.Nombre}</span> | <span>{props.Tipo}</span>
-          {console.log("categorias:", props.Categoria)}
+          {/* {console.log("categorias:", props.Categoria)} */}
         </p>
         <p className={styles.tel}>
           {props.Tel != ""
