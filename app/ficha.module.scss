@@ -33,36 +33,3 @@ $yellow: #ffbb2f;
   display: flex;
   justify-content: space-between;
 }
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin: 1rem 0;
-  position: sticky;
-  top: 4vh;
-  padding: 0rem 2rem;
-  min-height: inherit;
-  background-color: #f2f9ef;
-  min-width: 20rem;
-
-  button {
-    padding: 0.5rem 0;
-    background: none;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    text-align: left;
-    color: #40762a;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &.active {
-      font-weight: bold;
-      color: #20500d;
-    }
-  }
-}

@@ -1,8 +1,5 @@
 .main {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  max-width: 80vw;
+  max-width: 60vw;
   margin: 3rem auto;
   gap: 2rem;
   min-height: inherit;
@@ -15,4 +12,10 @@
   font-size: 0.85rem;
   width: 100%;
   z-index: 2;
+}
+
+@media only screen and (max-width: 767px) {
+  .main {
+    max-width: 100vw;
+  }
 }

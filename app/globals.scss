@@ -69,7 +69,7 @@ footer {
 
 /* Color/shape of burger icon bars on hover*/
 .bm-burger-bars-hover {
-  background: #a90000;
+  background: #0e7636;
 }
 
 /* Position and sizing of clickable cross button */
@@ -108,13 +108,34 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: #e8e3e3;
   padding: 0.8em;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 1rem 0;
+  width: 100%;
+  text-align: left;
+
+  &:hover {
+    background-color: #b78277;
+  }
+}
+
+h3.bm-item {
+  font-size: 20px;
+  cursor: default;
+  &:hover {
+    background-color: #3b8156;
+  }
 }
 
 /* Styling of overlay */

@@ -16,20 +16,8 @@ export default function Main(props) {
   }
   return (
     <>
-      {" "}
+      {filter != "Todas" ? <h2> {filter}</h2> : null}
       <Menu>
-        <a id="home" className="menu-item" href="/">
-          Home
-        </a>
-        <a id="about" className="menu-item" href="/about">
-          About
-        </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
-        </a>
-      </Menu>
-      {/* <h2>Categoría: {filter}</h2> */}
-      <div className={styles.buttons}>
         <h3>Categorías</h3>
         <button
           className={filter === "Todas" ? `${styles.active}` : null}
@@ -54,7 +42,7 @@ export default function Main(props) {
           }}>
           Construyendo Comunidad
         </button>
-      </div>
+      </Menu>
       <div className={styles.fichero}>
         {filter === "Todas"
           ? props.data.map((ficha) => {
