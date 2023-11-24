@@ -14,9 +14,12 @@ export default function Main(props) {
     setFilter(f);
     setFilteredList(props.data.filter((ficha) => ficha.Categoria === f));
   }
+
   return (
     <>
-      {filter != "Todas" ? <h2> {filter}</h2> : null}
+      {filter != "Todas" ? (
+        <h2 className={styles.category}> {filter}</h2>
+      ) : null}
       <Menu>
         <h3>Categorías</h3>
         <button

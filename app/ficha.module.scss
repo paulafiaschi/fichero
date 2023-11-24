@@ -6,6 +6,7 @@ $yellow: #ffbb2f;
   width: 100%;
   position: relative;
   padding-right: 2rem;
+
   p {
     margin: 0;
   }
@@ -32,4 +33,13 @@ $yellow: #ffbb2f;
 .summary {
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .fichero {
+    padding: 0 1rem;
+  }
+  .category {
+    padding-left: 1rem;
+  }
 }
